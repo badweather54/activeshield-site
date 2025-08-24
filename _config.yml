@@ -1,0 +1,89 @@
+# GitHub Pages Configuration
+# This file ensures optimal compatibility with GitHub Pages hosting
+
+# Site settings
+title: "ActiveShield - Your Complete Safety Resource Center"
+description: "Expert-recommended safety products, legal education, and security resources. Protect yourself and your family with ActiveShield's trusted recommendations."
+url: "https://activeshield.site"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Jekyll plugins (whitelist for GitHub Pages)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - .git
+  - .gitignore
+  - package.json
+  - package-lock.json
+  - yarn.lock
+
+# Include files that start with underscore
+include:
+  - .htaccess
+  - _pages
+
+# Collections (if needed for future expansion)
+collections:
+  products:
+    output: true
+    permalink: /:collection/:name/
+  resources:
+    output: true
+    permalink: /:collection/:name/
+
+# Default values for all pages
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      author: "ActiveShield Team"
+
+# SEO settings
+author: ActiveShield Team
+twitter:
+  username: activeshield
+facebook:
+  app_id: 
+  publisher: 
+  admins: 
+logo: /assets/images/logo.png
+social:
+  name: ActiveShield
+  links:
+    - https://twitter.com/activeshield
+    - https://facebook.com/activeshield
+    - https://instagram.com/activeshield
+    - https://pinterest.com/activeshield
+
+# Analytics
+google_analytics: GA_MEASUREMENT_ID
+
+# Compress HTML (optional but recommended)
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [development]
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
